@@ -1,4 +1,4 @@
-vim.g.mapleader = ""
+vim.g.mapleader = " "
 require("config.lazy")
 
 local lsp = require("lspconfig")
@@ -11,6 +11,17 @@ vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope help 
 require("nightfox").setup({})
 
 lsp.pyright.setup({})
+lsp.bashls.setup({
+  on_attach = function(client, bufnr)
+    local opts = { noremap = true, silent = true, buffer = bufnr }
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+  end,
+  filetypes = { "sh", "bash", "zsh" }, -- Supports shell scripts
+})
+
 lsp.rust_analyzer.setup({
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
