@@ -1,0 +1,26 @@
+[general]
+import = ["~/.config/alacritty/ayu_mirrage.toml"]
+live_config_reload = true
+
+[terminal]
+shell = "/bin/zsh"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+decorations = "Full"
+opacity = 0.9
+startup_mode = "Fullscreen"
+dynamic_title = true
+decorations_theme_variant = "Dark"
+
+[font]
+normal = { family = "JetBrainsMonoNL Nerd Font", style = "Regular" }
+size = 20.0
+
+[cursor]
+blink_timeout = 0
+
+[mouse]
+hide_when_typing = true
