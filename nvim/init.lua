@@ -19,7 +19,7 @@ lsp.bashls.setup({
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   end,
-  filetypes = { "sh", "bash", "zsh" }, -- Supports shell scripts
+  filetypes = { "sh", "bash", "zsh" },
 })
 
 lsp.rust_analyzer.setup({
@@ -32,5 +32,3 @@ lsp.rust_analyzer.setup({
     },
   },
 })
-
-vim.cmd("colorscheme nordfox")

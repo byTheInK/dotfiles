@@ -1,11 +1,11 @@
 return {
-  { "EdenEast/nightfox.nvim" },
+  { "vague2k/vague.nvim" },
 
   {
     "LazyVim/LazyVim",
 
     opts = {
-      colorscheme = "nightfox",
+      colorscheme = "vague",
     },
   },
 }
