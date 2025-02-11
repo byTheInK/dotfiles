@@ -8,8 +8,6 @@ vim.keymap.set("n", "<leader>fg", telescope.live_grep, { desc = "Telescope live 
 vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope help tags" })
 
-require("nightfox").setup({})
-
 lsp.pyright.setup({})
 lsp.bashls.setup({
   on_attach = function(client, bufnr)
