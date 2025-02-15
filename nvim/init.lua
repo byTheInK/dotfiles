@@ -20,6 +20,8 @@ lsp.bashls.setup({
   filetypes = { "sh", "bash", "zsh" },
 })
 
+lsp.clangd.setup({})
+
 lsp.rust_analyzer.setup({
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
